@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gvialpai/facemorph/issues"
   },
-  "homepage": "https://github.com/gvialpai/facemorph#readme"
+  "homepage": "https://github.com/gvialpai/facemorph#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
