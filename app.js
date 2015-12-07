@@ -1,24 +1,17 @@
-  var http        = require("http");
-  var fs          = require('fs');
-  var express     = require('express');
-  var app         = express();
-  app.set('port', process.env.PORT || 3000);
+console.log("Guus")
+$(print)
 
-  app.get('/', function(req, res) {
+      
+function print(){
+  var names = ["alastair", "ben", "guillame", "guus", "kwakes","marika","ollie","sarah","sed","calum","marty","emily","pritpal","jake","barney","alex","rob","emilyi"]
+  for(var i=0;i<names.length;i++){
+    $("#pictures").append("<li><img src='http://localhost:3000/" + names[i] + "'><div class='caption center-align'><h3>The Hassifier</h3><h5 class='light grey-text text-lighten-3'>Like you, but better.</h5></div></li>")
+  }
 
-    res.render('frontend/index.html')
+}
 
+$(document).ready(function(){
+    $('.slider').slider({full_width: true});
   });
-  app.get("/:name", function(req, res) {
 
-    var name = req.params.name;
-    console.log(name)
-
-    fs.readFile('./public/'+ name + '.jpeg', function(err, data) {
-      res.writeHead(200, {'Content-Type': 'image/jpeg'});
-      res.end(data)
-    })
-  })
-
-  app.listen(process.env.PORT || 3000 )
-
+      
