@@ -27,7 +27,7 @@ function facemorphsShow(req,res){
     if (!facemorph) return res.status(404).send(err);
 
 
-    res.status(200).send(facemorph);
+    res.status(200).send("<img src='" + facemorph.url + "'>");
   })
 }
 
