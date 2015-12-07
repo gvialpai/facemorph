@@ -2,7 +2,7 @@
   var fs          = require('fs');
   var express     = require('express');
   var app         = express();
-  // app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 3000);
 
   app.get('/', function(req, res) {
 
@@ -20,5 +20,5 @@
     })
   })
 
-  // app.listen(process.env.PORT || 3000 
+  app.listen(process.env.PORT || 3000 )
 
