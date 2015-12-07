@@ -4,9 +4,14 @@ var express     = require('express');
 var app         = express();
 app.set('port', process.env.PORT || 3000);
 
+app.set('views');
+app.engine('ejs', require('ejs').renderFile);
+app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function(req, res) {
 
-  res.render('frontend/index.html')
+  res.render('home')
 
 });
 app.get("/:name", function(req, res) {

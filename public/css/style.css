@@ -1,0 +1,31 @@
+@keyframes lightup {
+  from {
+    opacity: 0.02;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.row {
+  text-align: center;
+}
+
+.picture {
+  opacity: 0.01;
+}
+
+.picture:hover {
+  animation-duration: 1s;
+  animation-name: lightup;
+}
+
+body {
+  background-color: black;
+}
