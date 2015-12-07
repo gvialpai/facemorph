@@ -8,7 +8,7 @@ router.route("/facemorphs")
   .post(facemorphsController.facemorphsCreate)
 
 router.route("/facemorphs/:name")
-  // .get(facemorphsController.facemorphsShow)
+  .get(facemorphsController.facemorphsShow)
   // .delete(facemorphsController.facemorphsDelete)
 
 module.exports = router;

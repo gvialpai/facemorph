@@ -21,12 +21,21 @@ function facemorphsCreate(req, res) {
 
 function facemorphsShow(req,res){
   var name = req.params.name
-  Facemorph.findOne({ name: name})
+  Facemorph.findOne({ name: name}, function(err, facemorph){
+    console.log(req)
+    if (err) return res.status(500).send(err);
+    if (!facemorph) return res.status(404).send(err);
+
+
+    res.status(200).send(facemorph);
+  })
 }
+
 
 module.exports = {
   facemorphsIndex: facemorphsIndex,
-  facemorphsCreate: facemorphsCreate
+  facemorphsCreate: facemorphsCreate,
+  facemorphsShow: facemorphsShow
 }
 
 // .get(facemorphsController.facemorphsShow)
