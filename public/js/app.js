@@ -10,6 +10,7 @@ function print(){
   addHovers();
 }
 
+
 function addHovers() {
 
   $('h1').click(function() {
@@ -17,6 +18,7 @@ function addHovers() {
   })
 
   $('.picture').hover(function() {
-    console.log(this);
+    $('.picture').css("opacity", "0.02");
+    $(this).delay(1000).css("opacity", "1");
   })
 }
