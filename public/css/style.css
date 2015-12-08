@@ -26,6 +26,10 @@ h1 {
   animation-name: lightup;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   background-color: black;
 }
